@@ -107,8 +107,3 @@ namespace jeJucePlugin
 		return m_roms[m_selectedRom];
 	}
 }
-
-juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
-{
-    return new jeJucePlugin::AudioPluginAudioProcessor();
-}

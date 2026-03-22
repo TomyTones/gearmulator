@@ -163,8 +163,11 @@ namespace pluginLib
 	protected:
 		void destroyController();
 
-	private:
 		void prepareToPlay(double sampleRate, int maximumExpectedSamplesPerBlock) override;
+		void processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages) override;
+		void processBlockBypassed(juce::AudioBuffer<float>& _buffer, juce::MidiBuffer& _midiMessages) override;
+
+	private:
 		void releaseResources() override;
 
 		//==============================================================================
@@ -177,8 +180,6 @@ namespace pluginLib
 		bool acceptsMidi() const override;
 		bool producesMidi() const override;
 		bool isMidiEffect() const override;
-		void processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages) override;
-		void processBlockBypassed(juce::AudioBuffer<float>& _buffer, juce::MidiBuffer& _midiMessages) override;
 
 #if !SYNTHLIB_DEMO_MODE
 		void setState(const void *_data, size_t _sizeInBytes);

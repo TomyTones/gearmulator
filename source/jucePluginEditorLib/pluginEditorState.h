@@ -52,10 +52,10 @@ namespace jucePluginEditorLib
 
 		float getRootScale() const { return m_rootScale; }
 
-		int getWidth() const;
-		int getHeight() const;
+		virtual int getWidth() const;
+		virtual int getHeight() const;
 
-		bool resizeEditor(int _width, int _height) const;
+		virtual bool resizeEditor(int _width, int _height) const;
 
 		const Skin& getCurrentSkin() { return m_currentSkin; }
 		const std::vector<Skin>& getIncludedSkins();
@@ -67,7 +67,7 @@ namespace jucePluginEditorLib
 		std::function<void(int)> evSetGuiScale;
 		std::function<void(juce::Component*)> evSkinLoaded;
 
-		juce::Component* getUiRoot() const;
+		virtual juce::Component* getUiRoot() const;
 
 		void loadDefaultSkin();
 

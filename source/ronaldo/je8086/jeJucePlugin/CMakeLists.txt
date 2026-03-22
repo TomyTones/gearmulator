@@ -5,6 +5,7 @@ project(jeJucePlugin VERSION ${CMAKE_PROJECT_VERSION})
 set(SOURCES
 	jeAssign.cpp jeAssign.h
 	jeController.cpp jeController.h
+	jeCreatePlugin.cpp
 	jeEditor.cpp jeEditor.h
 	jeFocusedParameter.cpp jeFocusedParameter.h
 	jeLcd.cpp jeLcd.h
