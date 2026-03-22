@@ -1,3 +1,8 @@
+> **This is a fork.** It adds a dual-engine JP-8000 morph plugin (`JE8086Morph`) built on top of Gearmulator.
+> See [README_MORPH.md](README_MORPH.md) for the prototype docs and [PLAN_MORPH.md](PLAN_MORPH.md) for the implementation plan.
+
+---
+
 # Gearmulator
 
 [![CMake][s0]][l0] [![Nightly][s1]][l1] ![GPLv3][s2] [![Discord][s3]][l3]
